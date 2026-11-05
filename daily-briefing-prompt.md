@@ -3,11 +3,10 @@
 ## 목적
 매일 아침 **항공 동향 및 기상 브리핑**을 HTML 메일로 작성해 아래 수신자 모두에게 발송한다.
 
-## 수신자 (모두에게 한 통으로 발송)
-- kang87@airbusan.com
-- ncjeong@airbusan.com
-- hmlee@airbusan.com
-(테스트 발송 요청이 있을 때만 kang87@airbusan.com 에게만 보낸다.)
+## 수신자 (한 통으로 발송, 숨은참조)
+- to: kang87@airbusan.com (발송자 본인만 수신자란에 노출)
+- bcc: ncjeong@airbusan.com, hmlee@airbusan.com, bklee@airbusan.com
+(Gmail send_message 의 `to`/`bcc` 필드 사용. 테스트 발송 요청이 있을 때만 kang87@airbusan.com 에게만 보낸다.)
 
 ## 실행 순서 (반드시 이 순서)
 1. **기상 수집·보드 생성** (스크립트가 결정적으로 처리)
@@ -33,7 +32,7 @@
    ```
    python3 scripts/briefing/assemble.py /tmp/brief.json /tmp/weather.json /tmp/mail.html
    ```
-6. **발송** — Gmail `send_message` 의 `htmlBody` 에 `/tmp/mail.html` 전체를 넣고 수신자 3명 모두에게 발송. 제목: `[항공 동향 및 기상 브리핑] YYYY-MM-DD(요일) HH:MM KST 기준`. `body` 에는 핵심 한 줄 요약만 넣는다.
+6. **발송** — Gmail `send_message` 의 `htmlBody` 에 `/tmp/mail.html` 전체를 넣고 to=kang87, bcc=나머지 3명으로 발송. 제목: `[항공 동향 및 기상 브리핑] YYYY-MM-DD(요일) HH:MM KST 기준`. `body` 에는 핵심 한 줄 요약만 넣는다.
 
 ## 메일 구성 순서 (고정)
 1. 헤더 배너(기준 시각 KST)
