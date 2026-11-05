@@ -25,7 +25,8 @@ def kpi(label, state, k, head, sub):
 
 
 def timeline(states, blocks):
-    cells = ''.join(f'<td style="background:{C[s][0]};height:16px;border-right:2px solid #fff;"></td>' for s in states)
+    # 빈 셀은 메일 클라이언트(Gmail 등)에서 높이가 0으로 접히므로 &nbsp; + line-height 로 높이를 강제하고 bgcolor 속성도 함께 지정
+    cells = ''.join(f'<td bgcolor="{C[s][0]}" height="16" style="background:{C[s][0]};height:16px;line-height:16px;font-size:12px;border-right:2px solid #ffffff;">&nbsp;</td>' for s in states)
     hrs = ''.join(f'<td style="font-size:10px;color:#6B7280;padding-top:2px;">{b}</td>' for b in blocks)
     return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:8px 0 2px 0;"><tr>{cells}</tr><tr>{hrs}</tr></table>'
 
