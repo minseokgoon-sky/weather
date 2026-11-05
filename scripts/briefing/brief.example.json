@@ -1,0 +1,20 @@
+{
+  "to_label": "kang87 · ncjeong · hmlee @airbusan.com",
+  "as_of": "2026-11-05(목) 09:30",
+  "kpi_airline": {"state": "이슈", "color": "G", "head": "에어부산 3Q 흑자전환", "sub": "KS-SQI LCC 10년 연속 1위 · 통합 LCC 본사 논의"},
+  "kpi_sea_sub": "호치민·양곤·KL·자카르타 등 · 태풍 영향 낮음",
+  "key_points": [
+    {"color": "R", "text": "<b>제주</b>: (한 줄 요약)"},
+    {"color": "A", "text": "<b>김해·대구</b>: (한 줄 요약)"},
+    {"color": "B", "text": "<b>동남아</b>: (한 줄 요약)"},
+    {"color": "G", "text": "<b>에어부산</b>: (한 줄 요약)"}
+  ],
+  "news_sections": [
+    {"title": "국적사 주요 뉴스", "color": "G",
+     "featured": {"label": "에어부산", "items": [
+       {"tag": "실적", "color": "G", "url": "https://news.google.com/rss/articles/...", "title": "기사 제목", "summary": "한 줄 요약", "source": "언론사 · 11/4 21:12"}]},
+     "items": [
+       {"tag": "경영진", "color": "P", "url": "https://...", "title": "기사 제목", "summary": "한 줄 요약", "source": "언론사 · 11/4 17:22"}]},
+    {"title": "글로벌 항공 시장 뉴스", "color": "B", "items": []}
+  ]
+}
